@@ -10,6 +10,7 @@ exec("afplay Example.mp3", (error, stdout, stderr) => {
         return;
     }
     console.log(`stdout: ${stdout}`);
+    console.log("Finished")
 });
 
 
