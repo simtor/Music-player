@@ -20,19 +20,20 @@ const rl = readline.createInterface({
 // }
 // rl.question("Input your medical licence number or Q to quit: ", inputHandler)
 
-
+console.log("songs list: 1.Example 2.Left")
 
 function playerSelector(selectedSong){
+    rl.question("Input song: ", playerSelector)
     if(selectedSong== 1){
-        exec("afplay Example.mp3")
         console.log("started")
+        exec("afplay Example.mp3")
     }else if (selectedSong== 2){
         exec("afplay Left.mp3");
-    }else{
-        console.log("Sorry")
+    }else if(selectedSong==='Q'){
         rl.close()
+    }else{
+        // console.log("Sorry")
     }
-    rl.question("Input song: ", playerSelector)
     // rl.question("select song: ", selectedSong);
     // return selectedSong
     
