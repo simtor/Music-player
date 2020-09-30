@@ -22,17 +22,23 @@ const rl = readline.createInterface({
 
 console.log("songs list: 1.Example 2.Left")
 
+rl.question("Input song: ", playerSelector)
 function playerSelector(selectedSong){
-    rl.question("Input song: ", playerSelector)
+    // rl.question("Input song: ", playerSelector)
     if(selectedSong== 1){
         console.log("started")
         exec("afplay Example.mp3")
+        rl.question("Input song: ", playerSelector)
     }else if (selectedSong== 2){
         exec("afplay Left.mp3");
+        rl.question("Input song: ", playerSelector)
     }else if(selectedSong==='Q'){
         rl.close()
+    }else if(selectedSong==='V'){
+        exec("afplay Example.mp3 -v 0");
+        rl.question("Input song: ", playerSelector)
     }else{
-        // console.log("Sorry")
+        rl.question("Input song: ", playerSelector)
     }
     // rl.question("select song: ", selectedSong);
     // return selectedSong
@@ -43,6 +49,8 @@ playerSelector()
 
 
 
+
+// exec("sudo osascript -e set Volume 0 ")
 
 
 
