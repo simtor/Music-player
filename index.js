@@ -29,10 +29,6 @@ function playerSelector(selectedSong){
 }
 
 
-
-// exec("sudo osascript -e set Volume 0 ")
-
-
 // exec("afplay Example.mp3", (error, stdout, stderr) => {
 //     console.log(`stdout: ${stdout}`);
 //     console.log("Finished")
